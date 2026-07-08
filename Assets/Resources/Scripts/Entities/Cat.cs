@@ -1,4 +1,5 @@
 using System;
+using RatRush.Controllers;
 using RatRush.Enums;
 using RatRush.Managers;
 using UnityEngine;
@@ -40,6 +41,7 @@ namespace RatRush.Entities
             {
                 if (catStatus == CatStatus.Nearest)
                 {
+                    GameManager.instance.player.GetComponent<PlayerController>().Crush();
                     GameManager.instance.GameOver();
                     UIManager.instance.deathCause.StringReference = new("UI_TABLE", "UI_FOOD_FOR_CAT");
                 }
@@ -81,7 +83,7 @@ namespace RatRush.Entities
             dir.y = 0f;
             targetRot = Quaternion.LookRotation(dir.normalized, Vector3.up);
 
-            transform.SetPositionAndRotation(Vector3.Lerp(transform.position, targetPos, 7f * Time.deltaTime), Quaternion.Slerp(transform.rotation, targetRot, 7f * Time.deltaTime));
+            transform.SetPositionAndRotation(Vector3.Lerp(transform.position, targetPos, 3f * Time.deltaTime), Quaternion.Slerp(transform.rotation, targetRot, 7f * Time.deltaTime));
         }
     }
 }

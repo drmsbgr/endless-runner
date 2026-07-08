@@ -9,6 +9,7 @@ namespace RatRush.Controllers
         [SerializeField] private AudioClip impactMetal;
         [SerializeField] private AudioClip squish;
         [SerializeField] private AudioClip impact3;
+        [SerializeField] private AudioClip collectClip;
 
         public void Damage()
         {
@@ -21,6 +22,11 @@ namespace RatRush.Controllers
                 SFXSource.PlayOneShot(squish, Random.value + .5f);
             else
                 SFXSource.PlayOneShot(impactMetal, Random.value + .5f);
+        }
+
+        public void Collect()
+        {
+            SFXSource.PlayOneShot(collectClip);
         }
     }
 }

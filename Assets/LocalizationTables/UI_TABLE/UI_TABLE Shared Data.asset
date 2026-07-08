@@ -67,6 +67,38 @@ MonoBehaviour:
     m_Key: UI_CRUSHED_BY_HUMAN
     m_Metadata:
       m_Items: []
+  - m_Id: 386197368123392
+    m_Key: UI_RESOLUTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 386391073665024
+    m_Key: UI_FULLSCREEN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 386595525013504
+    m_Key: UI_AUDIO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 386742623449088
+    m_Key: UI_AUDIO_GENERAL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 386910030704640
+    m_Key: UI_AUDIO_SFX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 387152797020160
+    m_Key: UI_AUDIO_MUSIC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 431361289662464
+    m_Key: UI_LANGUAGE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 434071716016128
+    m_Key: UI_HIGH_SCORE_VALUE
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

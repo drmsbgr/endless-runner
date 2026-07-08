@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using RatRush.World;
 using RatRush.Enums;
+using Unity.IntegerTime;
 
 namespace RatRush.Managers
 {
@@ -18,6 +19,8 @@ namespace RatRush.Managers
 
         [Header("Movement (Treadmill)")]
         public float moveSpeed = 15f;
+        public float maxMoveSpeed = 40f;
+        public float rate = 0.5f;
 
         private readonly List<GameObject> activeChunks = new();
         private float spawnPositionZ = 0f;
@@ -45,6 +48,12 @@ namespace RatRush.Managers
         {
             if (GameManager.instance.gameStatus == GameStatus.Running)
             {
+                if (moveSpeed < maxMoveSpeed)
+                {
+                    moveSpeed += rate * Time.deltaTime;
+                    if (moveSpeed > maxMoveSpeed)
+                        moveSpeed = maxMoveSpeed;
+                }
                 MoveChunks();
                 CheckAndDespawn();
             }

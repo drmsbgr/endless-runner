@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: cded03948109f0644b45f414ae586150, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 6567178635718689019
   m_TableData:
   - m_Id: 4918915072
     m_Localized: Start Game
@@ -70,6 +71,45 @@ MonoBehaviour:
     m_Localized: You crushed by human...
     m_Metadata:
       m_Items: []
+  - m_Id: 386197368123392
+    m_Localized: Resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 386391073665024
+    m_Localized: Fullscreen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 386595525013504
+    m_Localized: Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 386742623449088
+    m_Localized: General Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 386910030704640
+    m_Localized: Sound Effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 387152797020160
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 431361289662464
+    m_Localized: Language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 434071716016128
+    m_Localized: 'High Score: {high_score}'
+    m_Metadata:
+      m_Items:
+      - rid: 6567178635718689019
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 6567178635718689019
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 434071716016128

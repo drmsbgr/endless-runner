@@ -1,5 +1,5 @@
 using System;
-using RatRush.Contracts;
+using RatRush.Entities;
 
 namespace RatRush
 {
@@ -8,6 +8,6 @@ namespace RatRush
         public static Action OnGameStart;
         public static Action OnGameOver;
         public static Action<bool> OnPlayerImpact;
-        public static Action<ICollectible> OnPlayerCollect;
+        public static Action<Collectible> OnPlayerCollect;
     }
 }

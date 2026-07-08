@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1689669096880472865}
   - component: {fileID: 4560708809752096131}
-  - component: {fileID: 3566517675320430824}
+  - component: {fileID: 1953376801449726379}
   m_Layer: 0
   m_Name: CheeseCollectable
   m_TagString: Untagged
@@ -56,7 +56,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3566517675320430824
+--- !u!114 &1953376801449726379
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -67,8 +67,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1abd53a113be1340a7fd505345e0226, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RatRush.Collectible
-  rotateSpeed: 75
+  m_EditorClassIdentifier: Assembly-CSharp::RatRush.Entities.Collectible
+  data: {fileID: 11400000, guid: 964f8325c9dd0784d823302f342c5bf1, type: 2}
+  rotateSpeed: 50
 --- !u!1 &7913030939822359250
 GameObject:
   m_ObjectHideFlags: 0

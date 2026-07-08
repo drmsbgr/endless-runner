@@ -62,6 +62,7 @@ namespace RatRush.Controllers
         {
             if (GameManager.instance.gameStatus != GameStatus.Running)
                 return;
+
             if (context.started)
             {
                 isCrouch = true;
@@ -101,16 +102,29 @@ namespace RatRush.Controllers
 
         private void OnGameStart()
         {
+            speedFactor = initialSpeedFactor;
             cheeseInHand.SetActive(false);
             //rigidbody içeren bir kopya rastgele yöne fırlatılabilir.
             ratAnimator.Play("Locomotion");
         }
+
+        private float speedFactor = 1f;
+        [SerializeField] private float initialSpeedFactor = 1f;
+        [SerializeField] private float speedFactorRate = 0.01f;
+        [SerializeField] private float maxSpeedFactor = 2f;
 
         void Update()
         {
             if (GameManager.instance.gameStatus == GameStatus.Running)
             {
                 ratAnimator.transform.localRotation = Quaternion.Slerp(ratAnimator.transform.localRotation, Quaternion.Euler(Vector3.zero), 10f * Time.deltaTime);
+                if (speedFactor < maxSpeedFactor)
+                {
+                    speedFactor += speedFactorRate * Time.deltaTime;
+                    if (speedFactor > maxSpeedFactor)
+                        speedFactor = maxSpeedFactor;
+                    ratAnimator.SetFloat("speedFactor", speedFactor);
+                }
             }
 
             var targetC = isCrouch ? 1f : 0f;
@@ -161,7 +175,12 @@ namespace RatRush.Controllers
                     newVelocity.y = -stickGroundVel;
             }
             else
-                newVelocity.y -= gravity * Time.fixedDeltaTime;
+            {
+                if (isCrouch)
+                    newVelocity.y -= gravity * 5f * Time.fixedDeltaTime;
+                else
+                    newVelocity.y -= gravity * Time.fixedDeltaTime;
+            }
 
             rb.linearVelocity = newVelocity;
         }
@@ -179,7 +198,23 @@ namespace RatRush.Controllers
             Gizmos.DrawLine(transform.position + Vector3.up, transform.position + Vector3.up + lastContactDir);
         }
 
+        void OnTriggerEnter(Collider other)
+        {
+            if (other.TryGetComponent<Collectible>(out var collectible))
+            {
+                GameManager.instance.ActivateParticle(other.transform.position);
+                collectible.Collect();
+                playerAudioController.Collect();
+                GameEvents.OnPlayerCollect?.Invoke(collectible);
+            }
+        }
+
         private Vector3 lastContactDir;
+
+        public void Crush()
+        {
+            ratAnimator.Play("Crush");
+        }
 
         void OnCollisionEnter(Collision collision)
         {
@@ -199,7 +234,7 @@ namespace RatRush.Controllers
                 {
                     //tek yer
                     GameManager.instance.GameOver();
-                    ratAnimator.Play("Crush");
+                    Crush();
 
                     if (obstacle.obstacleType == ObstacleType.Human)
                     {
@@ -208,8 +243,7 @@ namespace RatRush.Controllers
                     else
                     {
                         ratAnimator.transform.localScale = new(.8f, .1f, .8f);
-                        ratAnimator.transform.localRotation = Quaternion.Euler(-90f, 0f, 0f);
-                        ratAnimator.transform.localPosition = Vector3.up;
+                        ratAnimator.transform.SetLocalPositionAndRotation(Vector3.up, Quaternion.Euler(-90f, 0f, 0f));
                     }
 
                     playerAudioController.Crush(obstacle.obstacleType);
