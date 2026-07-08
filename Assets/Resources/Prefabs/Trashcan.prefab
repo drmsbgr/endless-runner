@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 6978185179885570566}
   - component: {fileID: 3157517750633218087}
   - component: {fileID: 6990727864728818280}
+  - component: {fileID: 5834263809644308919}
   m_Layer: 7
   m_Name: obstacle (1)
   m_TagString: Untagged
@@ -160,6 +161,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: -0.00000047683716, y: 0, z: 0}
+--- !u!114 &5834263809644308919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3935312819367717311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4757d7a806e41ba4f9190bc6725ee31b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RatRush.Entities.Obstacle
+  obstacleType: 0
 --- !u!1 &4725080308950534619
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,6 +186,7 @@ GameObject:
   - component: {fileID: 8163707368993419578}
   - component: {fileID: 3517629149449284809}
   - component: {fileID: 3143437531587641647}
+  - component: {fileID: 7884776892689339292}
   m_Layer: 7
   m_Name: obstacle
   m_TagString: Untagged
@@ -272,6 +287,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: -0.00000047683716, y: 0, z: 0}
+--- !u!114 &7884776892689339292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4725080308950534619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4757d7a806e41ba4f9190bc6725ee31b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RatRush.Entities.Obstacle
+  obstacleType: 2
 --- !u!1 &4815051169467350770
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,6 +312,7 @@ GameObject:
   - component: {fileID: 6193739054368930104}
   - component: {fileID: 6263919702176801067}
   - component: {fileID: 9003458781253605072}
+  - component: {fileID: 1507006005974376030}
   m_Layer: 7
   m_Name: obstacle (2)
   m_TagString: Untagged
@@ -384,6 +413,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: -0.00000047683716, y: 0, z: 0}
+--- !u!114 &1507006005974376030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4815051169467350770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4757d7a806e41ba4f9190bc6725ee31b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RatRush.Entities.Obstacle
+  obstacleType: 0
 --- !u!1 &8133828600936664795
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +438,7 @@ GameObject:
   - component: {fileID: 1986115309692392486}
   - component: {fileID: 5729391447242513560}
   - component: {fileID: 8308184814395998074}
+  - component: {fileID: 6505660058758738714}
   m_Layer: 7
   m_Name: obstacle
   m_TagString: Untagged
@@ -496,6 +539,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: -0.00000047683716, y: 0, z: 0}
+--- !u!114 &6505660058758738714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8133828600936664795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4757d7a806e41ba4f9190bc6725ee31b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RatRush.Entities.Obstacle
+  obstacleType: 2
 --- !u!1001 &7712151503513524524
 PrefabInstance:
   m_ObjectHideFlags: 0

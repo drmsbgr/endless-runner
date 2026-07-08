@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI_TABLE_tr
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: tr
+  m_SharedData: {fileID: 11400000, guid: cded03948109f0644b45f414ae586150, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 4918915072
+    m_Localized: "Oyuna Ba\u015Fla"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 181012574208
+    m_Localized: Tekrar Oyna
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579475648512
+    m_Localized: "Men\xFCye D\xF6n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1200664653824
+    m_Localized: Oyun Bitti!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1839717199872
+    m_Localized: Ayarlar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1925708820480
+    m_Localized: "\xC7\u0131k"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2972447715328
+    m_Localized: "Geri D\xF6n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4877328625664
+    m_Localized: Oyun Durdu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79115431489536
+    m_Localized: Devam Et
+    m_Metadata:
+      m_Items: []
+  - m_Id: 99145011474432
+    m_Localized: Kediye yem oldun :(
+    m_Metadata:
+      m_Items: []
+  - m_Id: 99420967317504
+    m_Localized: "Kafay\u0131 tahtaya g\xF6md\xFCn..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 99636680372224
+    m_Localized: "\xC7\xF6p kutusuna yap\u0131\u015Ft\u0131n..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 99981699624960
+    m_Localized: "\u0130nsan taraf\u0131ndan ezildin..."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

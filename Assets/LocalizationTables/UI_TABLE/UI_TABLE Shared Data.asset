@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UI_TABLE Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: UI_TABLE
+  m_TableCollectionNameGuidString: cded03948109f0644b45f414ae586150
+  m_Entries:
+  - m_Id: 4918915072
+    m_Key: UI_START_GAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 181012574208
+    m_Key: UI_PLAY_AGAIN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579475648512
+    m_Key: UI_BACK_TO_MENU
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1200664653824
+    m_Key: UI_GAME_OVER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1839717199872
+    m_Key: UI_SETTINGS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1925708820480
+    m_Key: UI_QUIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2972447715328
+    m_Key: UI_BACK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4877328625664
+    m_Key: UI_PAUSED
+    m_Metadata:
+      m_Items: []
+  - m_Id: 79115431489536
+    m_Key: UI_RESUME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 99145011474432
+    m_Key: UI_FOOD_FOR_CAT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 99420967317504
+    m_Key: UI_IMPACT_BENCH
+    m_Metadata:
+      m_Items: []
+  - m_Id: 99636680372224
+    m_Key: UI_CRUSHED_BY_TRASHCAN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 99981699624960
+    m_Key: UI_CRUSHED_BY_HUMAN
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 6567178615227154746
+  references:
+    version: 2
+    RefIds:
+    - rid: 6567178615227154746
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1783436976391

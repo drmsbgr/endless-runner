@@ -1,11 +1,13 @@
 using UnityEngine;
 using System.Collections.Generic;
 using RatRush.World;
+using RatRush.Enums;
 
 namespace RatRush.Managers
 {
     public class ChunkManager : MonoBehaviour
     {
+        public static ChunkManager instance = null;
         [Header("Pool Settings")]
         [SerializeField] private List<ChunkPool> chunkPools;
 
@@ -20,6 +22,11 @@ namespace RatRush.Managers
         private readonly List<GameObject> activeChunks = new();
         private float spawnPositionZ = 0f;
 
+        void Awake()
+        {
+            instance = this;
+        }
+
         void Start()
         {
             InitializePool();
@@ -28,15 +35,27 @@ namespace RatRush.Managers
                 SpawnRandomChunk(true);
         }
 
+        public void ResetChunks()
+        {
+            for (int i = 0; i < activeChunks.Count; i++)
+                activeChunks[i].transform.position = chunkLength * i * Vector3.forward;
+        }
+
         void Update()
         {
-            MoveChunks();
-            CheckAndDespawn();
+            if (GameManager.instance.gameStatus == GameStatus.Running)
+            {
+                MoveChunks();
+                CheckAndDespawn();
+            }
         }
+
+        private GameObject poolContainer;
 
         private void InitializePool()
         {
-            var poolContainer = new GameObject("Chunk Pool Container");
+            if (poolContainer == null)
+                poolContainer = new GameObject("Chunk Pool Container");
 
             foreach (var pool in chunkPools)
             {
