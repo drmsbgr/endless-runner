@@ -1,12 +1,9 @@
 using System.Linq;
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditor.SettingsManagement;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
-using static TMPro.TMP_Dropdown;
 
 namespace RatRush.Managers
 {
