@@ -37,5 +37,7 @@ namespace RatRush.Entities
                 girl.gameObject.SetActive(false);
             }
         }
+
+        public bool HasNoHuman() => !kid.gameObject.activeInHierarchy && !girl.gameObject.activeInHierarchy;
     }
 }

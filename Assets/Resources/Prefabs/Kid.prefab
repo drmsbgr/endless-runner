@@ -234,6 +234,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RatRush.Entities.Human
   animator: {fileID: 3414389343899664488}
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!4 &8755690162404006418 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 43c72133d8a073c43a162b28b0ce87f7, type: 3}

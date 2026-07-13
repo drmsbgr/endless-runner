@@ -26,5 +26,6 @@ namespace RatRush.Enums
         Bench,
         Trashcan,
         Human,
+        TrashcanFall
     }
 }

@@ -377,7 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4757d7a806e41ba4f9190bc6725ee31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RatRush.Entities.Obstacle
-  obstacleType: 0
+  obstacleType: 1
 --- !u!1 &3378234490418585333
 GameObject:
   m_ObjectHideFlags: 0
@@ -558,7 +558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4757d7a806e41ba4f9190bc6725ee31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RatRush.Entities.Obstacle
-  obstacleType: 0
+  obstacleType: 1
 --- !u!1 &4194377134017727963
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,7 +684,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4757d7a806e41ba4f9190bc6725ee31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RatRush.Entities.Obstacle
-  obstacleType: 0
+  obstacleType: 1
 --- !u!1 &8625588601626623491
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,7 +810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4757d7a806e41ba4f9190bc6725ee31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RatRush.Entities.Obstacle
-  obstacleType: 0
+  obstacleType: 1
 --- !u!1 &9148260841329080505
 GameObject:
   m_ObjectHideFlags: 0
