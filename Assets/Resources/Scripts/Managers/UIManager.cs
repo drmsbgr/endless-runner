@@ -78,17 +78,9 @@ namespace RatRush.Managers
             if (Keyboard.current.escapeKey.wasPressedThisFrame)
             {
                 if (GameManager.instance.gameStatus == GameStatus.Running && !pausePanel.activeInHierarchy)
-                {
-                    Time.timeScale = 0f;
-                    GameManager.instance.musicSource.Pause();
-                    OpenPausePanel();
-                }
+                    GameManager.instance.PauseGame();
                 else if (pausePanel.activeInHierarchy)
-                {
-                    Time.timeScale = 1f;
-                    GameManager.instance.musicSource.UnPause();
                     GameManager.instance.ResumeGame();
-                }
             }
         }
 

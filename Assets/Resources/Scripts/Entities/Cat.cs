@@ -1,4 +1,3 @@
-using System;
 using RatRush.Controllers;
 using RatRush.Enums;
 using RatRush.Managers;

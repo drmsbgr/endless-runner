@@ -61,8 +61,17 @@ namespace RatRush.Managers
 
         public void SetGameStatus(GameStatus newStatus) => gameStatus = newStatus;
 
+        public void PauseGame()
+        {
+            Time.timeScale = 0f;
+            musicSource.Pause();
+            UIManager.instance.OpenPausePanel();
+        }
+
         public void ResumeGame()
         {
+            Time.timeScale = 1f;
+            musicSource.UnPause();
             UIManager.instance.ResumeGame();
             SetGameStatus(GameStatus.Running);
         }
